@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOБ</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <h1 class="pseudologo" onclick="location.href='index.html';">SHOБ</h1>
+            </div>
+            <button class="header--button">Корзина</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="goodsbox">
+            <h2 class="goodsbox__header">Товары</h2>
+            <div class="goodsbox__handler">
+
+            </div>
+        </div>
+        <div class="hamburgerMaker">
+            <h2 class="hamburgerMaker__header">🍔ГАМБУРГЕРМЕЙКЕР🍔</h2>
+            <div class="hamburgerMaker__handler">
+                <div class="hamburgerMaker__chooseSize">
+                    <div class="hamburgerMaker__chooseSize--radioHandler">
+                        <p>Выберите размер</p>
+                        <div>
+                            <label class="nonselect"><input type="radio" name="size" id="sizeSmall"
+                                    onclick="hamburgerMaker.setSize(0)">маленький 2.99$</label>
+                            <label class="nonselect"><input type="radio" name="size" id="sizeBig" class="hamburgerSize"
+                                    onclick="hamburgerMaker.setSize(1)" checked>БОЛЬШОЙ 5.99$</label>
+                        </div>
+                    </div>
+                    <div class="hamburgerMaker__chooseSize--presenter nonselect">🍔</div>
+                </div>
+                <div class="hamburgerMaker__chooseAdditional">
+                    <div class="hamburgerMaker__chooseAdditional--checkboxHandler">
+                        <div class="hamburgerMaker__chooseAdditional__mustHave">
+                            <p>Минимум одну добавку:</p>
+                            <label class="nonselect chooseAdditional"><input class="additional" type="checkbox" name="additional" id="cheese">Добавить
+                                сыр 1$</label>
+                            <label class="nonselect chooseAdditional"><input class="additional" type="checkbox" name="additional" id="salat">Добавить
+                                салат 0.5$</label>
+                            <label class="nonselect chooseAdditional"><input class="additional" type="checkbox" name="additional" id="french">Добавить
+                                картошку 1$</label>
+                        </div>
+                        <div class="hamburgerMaker__chooseAdditional__mustNotHave">
+                            <p>Дополнительно:</p>
+                            <label class="nonselect"><input type="checkbox" name="additional" id="pepper">Добавить
+                                перец 0.5$</label>
+                            <label class="nonselect"><input type="checkbox" name="additional" id="mayo">Добавить
+                                майонез 0.5$</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburgerMaker__total">
+                    <div class="hamburgerMaker__total__handler">
+                        <p class="hamburgerMaker__total--price">К оплате: <span id="totalPrice">123</span>$ <br>Калорийность: <span id="totalCalorie">111</span> калорий.</p>
+                        <label class="nonselect"><input type="button" id = "makeOrder" value="Оформить заказ"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="regexp">
+            <h2 class = "regexp__header">
+                RegExp
+            </h2>
+            <div class="regexp__handler">
+                <textarea id = "regexp__handler--input" oninput="regexp.replace()">'aren't don't wasn't'</textarea>
+                <textarea id = "regexp__handler--output"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
